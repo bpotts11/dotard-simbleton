@@ -128,3 +128,11 @@ export const mfgBusinesses = businesses.filter(businessObject => {
   }
   return false
 })
+
+export const useAgents = businesses.map(businessObject => {
+  return {
+    fullName: `${businessObject.purchasingAgent.nameFirst} ${businessObject.purchasingAgent.nameLast}`,
+    company: `${businessObject.companyName}`,
+    phoneNumber: `${businessObject.phoneWork}`,
+  }
+})

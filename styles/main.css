@@ -1,8 +1,12 @@
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
-h2{
+h2 {
+    font-size: 1.5em;
+}
+
+h3{
     margin: 20px 0 ;
 }
 p{
@@ -11,4 +15,8 @@ p{
 .business {
     border-bottom: 1px solid rgba(0, 0, 0, 0.514);
     padding-bottom: 10px;
+}
+
+.businessList--newYork, .businessList--manufacturing{
+    margin-top: 75px;
 }

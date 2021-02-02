@@ -1,9 +1,9 @@
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 h3{
@@ -12,11 +12,11 @@ h3{
 p{
     margin: 0;
 }
-.business {
+.business, .agent {
     border-bottom: 1px solid rgba(0, 0, 0, 0.514);
     padding-bottom: 10px;
 }
 
-.businessList--newYork, .businessList--manufacturing{
+.businessList--newYork, .businessList--manufacturing, .agents{
     margin-top: 75px;
 }

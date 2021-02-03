@@ -5,7 +5,7 @@ import { mfgBusinesses, nyBusinesses, useBusinesses } from "./BusinessProvider.j
 export const BusinessList = () => {
     const contentTarget = document.querySelector(".businessesContainer");
     const businessArray = useBusinesses()
-    contentTarget.innerHTML = "<h1>Active Businesses</h1>"
+    contentTarget.innerHTML = "<h2>Active Businesses</h2>"
 
     businessArray.forEach(
         (businessObject) => {
@@ -13,7 +13,6 @@ export const BusinessList = () => {
         }
     )
 }
-
 
 export const nyBusinessList = () => {
     const contentTarget = document.querySelector(".businessList--newYork");
@@ -38,3 +37,30 @@ export const mfgBusinessList = () => {
         }
     )
 }
+
+const companySearchResultArticle = document.querySelector(".foundCompanies")
+
+document
+    .querySelector("#companySearch")
+    .addEventListener("keypress", keyPressEvent => {
+        if (keyPressEvent.charCode === 13) {
+            /*
+                When user presses enter, find the matching business.
+                You can use the `.includes()` method strings to
+                see if a smaller string is part of a larger string.
+            */
+            const businessArray = useBusinesses()
+            const foundBusiness =
+                businessArray.find(business => business.companyName.includes(keyPressEvent.target.value))
+
+            companySearchResultArticle.innerHTML = `
+            <section class="business">
+                <h3 class="business__name">
+                ${foundBusiness.companyName}
+                </h3>
+                    <p>${foundBusiness.addressFullStreet}</p>
+                    <p>${foundBusiness.addressCity}, ${foundBusiness.addressStateCode} ${foundBusiness.addressZipCode}</p>
+                </section>
+            `;
+        }
+    });

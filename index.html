@@ -8,13 +8,31 @@
 </head>
 
 <body>
+    <header id="top">
+        <h1>Dotard Simbleton</h1>
+        <nav>
+            <a href="#activeBus">Active Businesses</a>
+            <a href="#newYorkBus">New Your Businesses</a>
+            <a href="#mfgBus">Manufacturing Businesses</a>
+            <a href="#agent">Purchasing Agents</a>
+        </nav>
+    </header>
     <main>
-        <article class="businessesContainer"></article>
-        <article class="businessList--newYork"></article>
-        <article class="businessList--manufacturing"></article>
-        <article class="agents"></article>
+        <h4>Look Up:
+            <input type="text" placeholder="Business Name" id="companySearch" />
+            or
+            <input type="text" placeholder="Agent Name" id="agentSearch" />
+        </h4>
+        <article class="foundCompanies foundAgents"></article>
+        <article id="activeBus" class="businessesContainer"></article>
+        <article id="newYorkBus" class="businessList--newYork"></article>
+        <article id="mfgBus" class="businessList--manufacturing"></article>
+        <article id="agent" class="agents"></article>
     </main>
     <script type="module" src="./scripts/main.js"></script>
 </body>
+<footer>
+    <a href="#top">back to top</a>
+</footer>
 
 </html>
